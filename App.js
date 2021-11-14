@@ -2,14 +2,14 @@ import { StatusBar } from "expo-status-bar";
 import React, { Component } from "react";
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 
-import EmissionsYearly from "./Components/emissionsyearly";
+import CarbonSinceAppStart from "./Components/EmissionCounter/carbonsinceappstart";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.safeview}>
       <ScrollView style={styles.scroll}>
       <View style={styles.container}>
-        <EmissionsYearly />
+        <CarbonSinceAppStart />
         <StatusBar style="auto" />
       </View>
       </ScrollView>
