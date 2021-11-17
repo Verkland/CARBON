@@ -1,33 +1,19 @@
-//import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import * as React from 'react';
+import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 
-// create a component
-const StoryCard = () => {
-    return (
-        <View style={styles.container}>
-            {/* Add image for story */}
+const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
-            {/* Replace with text from database */}
-            <Text style={styles.text}>StoryCard about Climate Change
-            </Text>
-        </View>
-    );
-};
+const StoryCard = () => (
+  <Card style={{margin: 40, borderRadius: 20, backgroundColor: "#f8f9fa"}}>
+    <Card.Content>
+      <Title>Drawdown Everywhere</Title>
+      <Paragraph style={{marginBottom: 10}}>This is the solution we have all been waiting for. Are you ready for this?</Paragraph>
+    </Card.Content>
+    <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+  </Card>
+);
 
-// define your styles
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
-    },
 
-    text: {
-        textAlign: "center",
-    }
-});
 
-//make this component available to the app
 export default StoryCard;
+
