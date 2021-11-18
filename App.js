@@ -9,21 +9,17 @@ import StoryCard from "./Components/Cards/storycard";
 import Flatlist from "./Components/flatlist";
 import theme from "./Components/Theme/theme";
 
-const FirstRoute = () => (
+const ExploreRoute = () => (
   <ScrollView style={theme.scrollview}>
     <StoryCard/><StoryCard/><StoryCard/><StoryCard/>
   </ScrollView>
 );
 
-const SecondRoute = () => (
-  <ScrollView style={theme.scrollview}>
-    <Flatlist></Flatlist>
-  </ScrollView>
-);
+const LearnRoute = () => <Flatlist></Flatlist>;
 
 const renderScene = SceneMap({
-  first: FirstRoute,
-  second: SecondRoute,
+  first: ExploreRoute,
+  second: LearnRoute,
 });
 
 const renderTabBar = props => (
