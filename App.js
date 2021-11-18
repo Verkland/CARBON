@@ -6,16 +6,18 @@ import { IconButton, Colors } from 'react-native-paper';
 
 import CarbonSinceAppStart from "./Components/EmissionCounter/carbonsinceappstart";
 import StoryCard from "./Components/Cards/storycard";
+import Flatlist from "./Components/flatlist";
+import theme from "./Components/Theme/theme";
 
 const FirstRoute = () => (
-  <ScrollView style={{ flex: 1, backgroundColor: "#e9ecef" }}>
+  <ScrollView style={theme.scrollview}>
     <StoryCard/><StoryCard/><StoryCard/><StoryCard/>
   </ScrollView>
 );
 
 const SecondRoute = () => (
-  <ScrollView style={{ flex: 1, backgroundColor: "#e9ecef" }}>
-    <StoryCard/><StoryCard/><StoryCard/><StoryCard/>
+  <ScrollView style={theme.scrollview}>
+    <Flatlist></Flatlist>
   </ScrollView>
 );
 
@@ -27,8 +29,8 @@ const renderScene = SceneMap({
 const renderTabBar = props => (
   <TabBar
     {...props}
-    indicatorStyle={{ backgroundColor: 'white' }}
-    style={{ backgroundColor: "#343a40" }}
+    indicatorStyle={theme.tabUnderline}
+    style={theme.headerBGColor}
   />
 );
 
@@ -37,24 +39,15 @@ export default function App() {
 
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'first', title: 'Solutions' },
+    { key: 'first', title: 'Explore' },
     { key: 'second', title: 'Learn' },
   ]);
 
   return (
     <>
-      <SafeAreaView style={{ backgroundColor: "#343a40" }}></SafeAreaView>
-      <View style={{ backgroundColor: "#343a40" }}>
-        <Text
-          style={{
-            color: "white",
-            textAlign: "center",
-            fontSize: 50,
-            padding: 10,
-          }}
-        >
-          carbon
-        </Text>
+      <SafeAreaView style={theme.headerBGColor}></SafeAreaView>
+      <View style={theme.headerBGColor}>
+        <Text style={theme.headerText}>carbon</Text>
       </View>
       <TabView
         renderTabBar={renderTabBar}
