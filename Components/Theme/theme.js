@@ -12,6 +12,11 @@ export default StyleSheet.create({
     padding: 10,
   },
 
+  tabUnderline: {
+    backgroundColor: "white",
+  },
+
+
   scrollview: {
     flex: 1,
     backgroundColor: "#e9ecef",
@@ -22,7 +27,10 @@ export default StyleSheet.create({
     backgroundColor: "#f8f9fa",
   },
 
-  tabUnderline: {
-    backgroundColor: "white",
+  item: {
+    backgroundColor: "#f8f9fa",
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
   },
 });

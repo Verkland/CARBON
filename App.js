@@ -15,7 +15,9 @@ const ExploreRoute = () => (
   </ScrollView>
 );
 
-const LearnRoute = () => <Flatlist></Flatlist>;
+const LearnRoute = () => (
+    <Flatlist></Flatlist>
+);
 
 const renderScene = SceneMap({
   first: ExploreRoute,
