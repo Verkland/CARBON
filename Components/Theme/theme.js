@@ -8,8 +8,17 @@ export default StyleSheet.create({
   headerText: {
     color: "white",
     textAlign: "center",
-    fontSize: 50,
-    padding: 10,
+    fontSize: 30,
+    fontWeight: "bold",
+  },
+
+  headerText2: {
+    color: "white",
+    textAlign: "left",
+    fontSize: 20,
+    paddingTop: 30,
+    paddingBottom: 10,
+    paddingLeft: 2
   },
 
   tabUnderline: {

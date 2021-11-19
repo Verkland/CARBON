@@ -8,9 +8,10 @@ import CarbonSinceAppStart from "./Components/EmissionCounter/carbonsinceappstar
 import StoryCard from "./Components/Cards/storycard";
 import Flatlist from "./Components/flatlist";
 import theme from "./Components/Theme/theme";
+import Logo from "./Components/Theme/logo";
 
 const ExploreRoute = () => (
-    <Flatlist></Flatlist>
+  <Flatlist></Flatlist>
 );
 
 const LearnRoute = () => (
@@ -45,7 +46,7 @@ export default function App() {
     <>
       <SafeAreaView style={theme.headerBGColor}></SafeAreaView>
       <View style={theme.headerBGColor}>
-        <Text style={theme.headerText}>carbon</Text>
+        <Logo/>
       </View>
       <TabView
         renderTabBar={renderTabBar}
