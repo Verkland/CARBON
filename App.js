@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { Component } from "react";
 import { useWindowDimensions, StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
-import { IconButton, Colors } from 'react-native-paper';
+import { IconButton, Colors, Card } from 'react-native-paper';
 
 import CarbonSinceAppStart from "./Components/EmissionCounter/carbonsinceappstart";
 import StoryCard from "./Components/Cards/storycard";
@@ -10,13 +10,13 @@ import Flatlist from "./Components/flatlist";
 import theme from "./Components/Theme/theme";
 
 const ExploreRoute = () => (
-  <ScrollView style={theme.scrollview}>
-    <StoryCard/><StoryCard/><StoryCard/><StoryCard/>
-  </ScrollView>
+    <Flatlist></Flatlist>
 );
 
 const LearnRoute = () => (
-    <Flatlist></Flatlist>
+  <ScrollView style={theme.scrollview}>
+    <StoryCard></StoryCard>
+  </ScrollView>
 );
 
 const renderScene = SceneMap({
