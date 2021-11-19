@@ -1,5 +1,5 @@
 # CARBON
-An app that explores ways to solve the climate crisis 🌍
+An app that explores stories about solving the climate crisis 🌍
 
 Made in React Native, using Expo's managed workflow, currently under development. 
 
