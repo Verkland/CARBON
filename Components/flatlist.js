@@ -43,7 +43,6 @@ const DATA = [
 
 // create a component
 const Flatlist = () => {
-
     const renderItem = ({ item }) => (
         <Item title={item.title} description={item.description} image={item.image} url={item.url}/>
       );
@@ -58,20 +57,6 @@ const Flatlist = () => {
       </SafeAreaView>
     );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
-  },
-  title: {
-    fontSize: 32,
-  },
-  tinyLogo: {
-    width: 100,
-    height: 100,
-  },
-});
 
 //make this component available to the app
 export default Flatlist;
